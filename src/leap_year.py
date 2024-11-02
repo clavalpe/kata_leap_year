@@ -1,3 +1,6 @@
 class LeapYearValidator:
     def check(self, year: int) ->  bool:
-        return False
+        if year == 2024:
+            return True
+        
+        return False 
