@@ -13,3 +13,6 @@ class TestLeapYearValidator:
 
     def test_if_divisible_by_400_is_leap_year(self):
         assert LeapYearValidator().check(1600) == True
+
+    def test_if_divisible_by_100_but_not_400_is_not_leap_year(self):
+        assert LeapYearValidator().check(1800) == False
