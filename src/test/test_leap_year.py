@@ -7,5 +7,6 @@ class TestLeapYearValidator:
     def test_if_not_divisible_by_4_is_not_leap_year(self, year):
         assert LeapYearValidator().check(year) == False
 
-    def test_if_divisible_by_4_is_leap_year(self):
-        assert LeapYearValidator().check(2024) == True
+    @pytest.mark.parametrize("year", [1996, 2004, 2024])
+    def test_if_divisible_by_4_is_leap_year(self, year):
+        assert LeapYearValidator().check(year) == True
